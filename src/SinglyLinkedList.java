@@ -81,6 +81,6 @@ public class SinglyLinkedList {
 	//singlyLinkedList.display(head);	// We always start from head node	
 	//System.out.println("Length of the Linked List is " + singlyLinkedList.length(head));
 	ListNode newHead = singlyLinkedList.insertAtBeginning(head, 13);  // Insert and return the new head
-	singlyLinkedList.display(newHead);		
+	singlyLinkedList.display(newHead);		// Now, head is the new one
 	}
 }
