@@ -20,7 +20,7 @@ public class SinglyLinkedList {
 		System.out.println(current);  // Here, current will be null		
 	}
 	
-	public int length (ListNode head) {
+	public int length (ListNode head) {   // Can be void RT if we are printing count directly
 		
 		if (head == null) {
 			return 0;   // Exit from if loop
@@ -38,14 +38,14 @@ public class SinglyLinkedList {
 	
 	public ListNode insertAtBeginning(ListNode head, int data) {  // This method must return a result of type SinglyLinkedList.ListNode
 		
-		ListNode newNode = new ListNode(data);
+		ListNode newNode = new ListNode(data);  // Get the new node ready
 		if(head == null) {
-			return newNode;			
+			return newNode;		// The only node then	
 		}
 		
 		newNode.next = head;
 		head = newNode;  // This is the new head
-		return head;
+		return head;     // Return the new head for display purpose
 	}
 	
 	private static class ListNode {	
@@ -66,7 +66,7 @@ public class SinglyLinkedList {
 	// 10 -> 8 -> 1 -> 11
 	// 10 is the head node
 		
-	ListNode head = new ListNode(10);    // Just passing the 'new' values
+	ListNode head = new ListNode(10);    // Just passing the 'new' values // Objects
 	ListNode second = new ListNode(8);
 	ListNode third = new ListNode(1);
 	ListNode fourth = new ListNode(11);
@@ -80,7 +80,7 @@ public class SinglyLinkedList {
 	SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
 	//singlyLinkedList.display(head);	// We always start from head node	
 	//System.out.println("Length of the Linked List is " + singlyLinkedList.length(head));
-	ListNode newHead = singlyLinkedList.insertAtBeginning(head, 13);
+	ListNode newHead = singlyLinkedList.insertAtBeginning(head, 13);  // Insert and return the new head
 	singlyLinkedList.display(newHead);		
 	}
 }
